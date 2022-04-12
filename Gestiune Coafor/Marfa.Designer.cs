@@ -36,24 +36,17 @@ namespace Gestiune_Coafor
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.finalContract_txtBox = new System.Windows.Forms.TextBox();
+            this.dataExp_txtBox = new System.Windows.Forms.TextBox();
             this.pretBuc_txtBox = new System.Windows.Forms.TextBox();
             this.furnizor_txtBox = new System.Windows.Forms.TextBox();
             this.cantitate_txtBox = new System.Windows.Forms.TextBox();
             this.numeProdus_txtBox = new System.Windows.Forms.TextBox();
-            this.d = new System.Windows.Forms.TextBox();
+            this.tipProdus_txtBox = new System.Windows.Forms.TextBox();
             this.back_btn = new System.Windows.Forms.Button();
             this.delete_btn = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipProdusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeprodusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pretBucRONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataexpirareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.furnizorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marfaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.mFdbDataSet2 = new Gestiune_Coafor.MFdbDataSet2();
             this.refresh_btn = new System.Windows.Forms.Button();
@@ -68,6 +61,20 @@ namespace Gestiune_Coafor
             this.marfaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.marfaTableAdapter1 = new Gestiune_Coafor.MFdbDataSet2TableAdapters.MarfaTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.marfaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.mFdbDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marfaBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.mFdbDataSet3 = new Gestiune_Coafor.MFdbDataSet3();
+            this.marfaBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.marfaTableAdapter2 = new Gestiune_Coafor.MFdbDataSet3TableAdapters.MarfaTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipProdusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeprodusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pretBucRONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataexpirareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.furnizorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_txtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mFdbDataSet2)).BeginInit();
@@ -79,6 +86,11 @@ namespace Gestiune_Coafor
             ((System.ComponentModel.ISupportInitialize)(this.angajatiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mFdbDataSet2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mFdbDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource5)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -153,14 +165,14 @@ namespace Gestiune_Coafor
             this.label1.Text = "Tip Produs";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // finalContract_txtBox
+            // dataExp_txtBox
             // 
-            this.finalContract_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.finalContract_txtBox.Location = new System.Drawing.Point(560, 41);
-            this.finalContract_txtBox.Name = "finalContract_txtBox";
-            this.finalContract_txtBox.Size = new System.Drawing.Size(92, 29);
-            this.finalContract_txtBox.TabIndex = 14;
-            this.finalContract_txtBox.TextChanged += new System.EventHandler(this.finalContract_txtBox_TextChanged);
+            this.dataExp_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataExp_txtBox.Location = new System.Drawing.Point(560, 41);
+            this.dataExp_txtBox.Name = "dataExp_txtBox";
+            this.dataExp_txtBox.Size = new System.Drawing.Size(92, 29);
+            this.dataExp_txtBox.TabIndex = 14;
+            this.dataExp_txtBox.TextChanged += new System.EventHandler(this.finalContract_txtBox_TextChanged);
             // 
             // pretBuc_txtBox
             // 
@@ -198,14 +210,14 @@ namespace Gestiune_Coafor
             this.numeProdus_txtBox.TabIndex = 11;
             this.numeProdus_txtBox.TextChanged += new System.EventHandler(this.numeProdus_txtBox_TextChanged);
             // 
-            // d
+            // tipProdus_txtBox
             // 
-            this.d.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.d.Location = new System.Drawing.Point(103, 40);
-            this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(101, 29);
-            this.d.TabIndex = 10;
-            this.d.TextChanged += new System.EventHandler(this.d_TextChanged);
+            this.tipProdus_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipProdus_txtBox.Location = new System.Drawing.Point(103, 40);
+            this.tipProdus_txtBox.Name = "tipProdus_txtBox";
+            this.tipProdus_txtBox.Size = new System.Drawing.Size(101, 29);
+            this.tipProdus_txtBox.TabIndex = 10;
+            this.tipProdus_txtBox.TextChanged += new System.EventHandler(this.d_TextChanged);
             // 
             // back_btn
             // 
@@ -267,57 +279,13 @@ namespace Gestiune_Coafor
             this.pretBucRONDataGridViewTextBoxColumn,
             this.dataexpirareDataGridViewTextBoxColumn,
             this.furnizorDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.marfaBindingSource2;
+            this.dataGridView1.DataSource = this.marfaBindingSource5;
             this.dataGridView1.Location = new System.Drawing.Point(12, 74);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(745, 659);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // tipProdusDataGridViewTextBoxColumn
-            // 
-            this.tipProdusDataGridViewTextBoxColumn.DataPropertyName = "Tip_Produs";
-            this.tipProdusDataGridViewTextBoxColumn.HeaderText = "Tip_Produs";
-            this.tipProdusDataGridViewTextBoxColumn.Name = "tipProdusDataGridViewTextBoxColumn";
-            // 
-            // numeprodusDataGridViewTextBoxColumn
-            // 
-            this.numeprodusDataGridViewTextBoxColumn.DataPropertyName = "Nume_produs";
-            this.numeprodusDataGridViewTextBoxColumn.HeaderText = "Nume_produs";
-            this.numeprodusDataGridViewTextBoxColumn.Name = "numeprodusDataGridViewTextBoxColumn";
-            this.numeprodusDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // cantitateDataGridViewTextBoxColumn
-            // 
-            this.cantitateDataGridViewTextBoxColumn.DataPropertyName = "Cantitate";
-            this.cantitateDataGridViewTextBoxColumn.HeaderText = "Cantitate";
-            this.cantitateDataGridViewTextBoxColumn.Name = "cantitateDataGridViewTextBoxColumn";
-            // 
-            // pretBucRONDataGridViewTextBoxColumn
-            // 
-            this.pretBucRONDataGridViewTextBoxColumn.DataPropertyName = "Pret_Buc_(RON)";
-            this.pretBucRONDataGridViewTextBoxColumn.HeaderText = "Pret_Buc_(RON)";
-            this.pretBucRONDataGridViewTextBoxColumn.Name = "pretBucRONDataGridViewTextBoxColumn";
-            // 
-            // dataexpirareDataGridViewTextBoxColumn
-            // 
-            this.dataexpirareDataGridViewTextBoxColumn.DataPropertyName = "Data_expirare";
-            this.dataexpirareDataGridViewTextBoxColumn.HeaderText = "Data_expirare";
-            this.dataexpirareDataGridViewTextBoxColumn.Name = "dataexpirareDataGridViewTextBoxColumn";
-            // 
-            // furnizorDataGridViewTextBoxColumn
-            // 
-            this.furnizorDataGridViewTextBoxColumn.DataPropertyName = "Furnizor";
-            this.furnizorDataGridViewTextBoxColumn.HeaderText = "Furnizor";
-            this.furnizorDataGridViewTextBoxColumn.Name = "furnizorDataGridViewTextBoxColumn";
             // 
             // marfaBindingSource2
             // 
@@ -335,7 +303,7 @@ namespace Gestiune_Coafor
             this.refresh_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh_btn.Location = new System.Drawing.Point(12, 12);
             this.refresh_btn.Name = "refresh_btn";
-            this.refresh_btn.Size = new System.Drawing.Size(73, 58);
+            this.refresh_btn.Size = new System.Drawing.Size(85, 27);
             this.refresh_btn.TabIndex = 4;
             this.refresh_btn.Text = "Refresh";
             this.refresh_btn.UseVisualStyleBackColor = false;
@@ -392,7 +360,7 @@ namespace Gestiune_Coafor
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = (System.Drawing.Image)global::Gestiune_Coafor.Properties.Resources.logo_mada_no_ellipse2;
+            this.pictureBox1.Image = global::Gestiune_Coafor.Properties.Resources.logo_mada_no_ellipse2;
             this.pictureBox1.Location = new System.Drawing.Point(861, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 97);
@@ -400,11 +368,92 @@ namespace Gestiune_Coafor
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // marfaBindingSource3
+            // 
+            this.marfaBindingSource3.DataMember = "Marfa";
+            this.marfaBindingSource3.DataSource = this.mFdbDataSet1;
+            // 
+            // mFdbDataSet2BindingSource
+            // 
+            this.mFdbDataSet2BindingSource.DataSource = this.mFdbDataSet2;
+            this.mFdbDataSet2BindingSource.Position = 0;
+            // 
+            // marfaBindingSource4
+            // 
+            this.marfaBindingSource4.DataMember = "Marfa";
+            this.marfaBindingSource4.DataSource = this.mFdbDataSet1;
+            // 
+            // mFdbDataSet3
+            // 
+            this.mFdbDataSet3.DataSetName = "MFdbDataSet3";
+            this.mFdbDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // marfaBindingSource5
+            // 
+            this.marfaBindingSource5.DataMember = "Marfa";
+            this.marfaBindingSource5.DataSource = this.mFdbDataSet3;
+            // 
+            // marfaTableAdapter2
+            // 
+            this.marfaTableAdapter2.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipProdusDataGridViewTextBoxColumn
+            // 
+            this.tipProdusDataGridViewTextBoxColumn.DataPropertyName = "Tip_Produs";
+            this.tipProdusDataGridViewTextBoxColumn.HeaderText = "Tip_Produs";
+            this.tipProdusDataGridViewTextBoxColumn.Name = "tipProdusDataGridViewTextBoxColumn";
+            // 
+            // numeprodusDataGridViewTextBoxColumn
+            // 
+            this.numeprodusDataGridViewTextBoxColumn.DataPropertyName = "Nume_produs";
+            this.numeprodusDataGridViewTextBoxColumn.HeaderText = "Nume_produs";
+            this.numeprodusDataGridViewTextBoxColumn.Name = "numeprodusDataGridViewTextBoxColumn";
+            // 
+            // cantitateDataGridViewTextBoxColumn
+            // 
+            this.cantitateDataGridViewTextBoxColumn.DataPropertyName = "Cantitate";
+            this.cantitateDataGridViewTextBoxColumn.HeaderText = "Cantitate";
+            this.cantitateDataGridViewTextBoxColumn.Name = "cantitateDataGridViewTextBoxColumn";
+            // 
+            // pretBucRONDataGridViewTextBoxColumn
+            // 
+            this.pretBucRONDataGridViewTextBoxColumn.DataPropertyName = "Pret_Buc_RON";
+            this.pretBucRONDataGridViewTextBoxColumn.HeaderText = "Pret_Buc_RON";
+            this.pretBucRONDataGridViewTextBoxColumn.Name = "pretBucRONDataGridViewTextBoxColumn";
+            // 
+            // dataexpirareDataGridViewTextBoxColumn
+            // 
+            this.dataexpirareDataGridViewTextBoxColumn.DataPropertyName = "Data_expirare";
+            this.dataexpirareDataGridViewTextBoxColumn.HeaderText = "Data_expirare";
+            this.dataexpirareDataGridViewTextBoxColumn.Name = "dataexpirareDataGridViewTextBoxColumn";
+            // 
+            // furnizorDataGridViewTextBoxColumn
+            // 
+            this.furnizorDataGridViewTextBoxColumn.DataPropertyName = "Furnizor";
+            this.furnizorDataGridViewTextBoxColumn.HeaderText = "Furnizor";
+            this.furnizorDataGridViewTextBoxColumn.Name = "furnizorDataGridViewTextBoxColumn";
+            // 
+            // Id_txtBox
+            // 
+            this.Id_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_txtBox.Location = new System.Drawing.Point(12, 39);
+            this.Id_txtBox.Name = "Id_txtBox";
+            this.Id_txtBox.Size = new System.Drawing.Size(85, 29);
+            this.Id_txtBox.TabIndex = 10;
+            this.Id_txtBox.TextChanged += new System.EventHandler(this.d_TextChanged);
+            // 
             // Marfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = (System.Drawing.Image)global::Gestiune_Coafor.Properties.Resources.background_mada;
+            this.BackgroundImage = global::Gestiune_Coafor.Properties.Resources.background_mada;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(967, 745);
             this.Controls.Add(this.add_btn);
@@ -415,12 +464,13 @@ namespace Gestiune_Coafor
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.finalContract_txtBox);
+            this.Controls.Add(this.dataExp_txtBox);
             this.Controls.Add(this.pretBuc_txtBox);
             this.Controls.Add(this.furnizor_txtBox);
             this.Controls.Add(this.cantitate_txtBox);
             this.Controls.Add(this.numeProdus_txtBox);
-            this.Controls.Add(this.d);
+            this.Controls.Add(this.Id_txtBox);
+            this.Controls.Add(this.tipProdus_txtBox);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.save_btn);
@@ -443,6 +493,11 @@ namespace Gestiune_Coafor
             ((System.ComponentModel.ISupportInitialize)(this.angajatiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mFdbDataSet2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mFdbDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marfaBindingSource5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,12 +511,12 @@ namespace Gestiune_Coafor
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox finalContract_txtBox;
+        private System.Windows.Forms.TextBox dataExp_txtBox;
         private System.Windows.Forms.TextBox pretBuc_txtBox;
         private System.Windows.Forms.TextBox furnizor_txtBox;
         private System.Windows.Forms.TextBox cantitate_txtBox;
         private System.Windows.Forms.TextBox numeProdus_txtBox;
-        private System.Windows.Forms.TextBox d;
+        private System.Windows.Forms.TextBox tipProdus_txtBox;
         private System.Windows.Forms.Button back_btn;
         private System.Windows.Forms.Button delete_btn;
         private System.Windows.Forms.Button save_btn;
@@ -480,6 +535,13 @@ namespace Gestiune_Coafor
         private MFdbDataSet2 mFdbDataSet2;
         private System.Windows.Forms.BindingSource marfaBindingSource2;
         private MFdbDataSet2TableAdapters.MarfaTableAdapter marfaTableAdapter1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource marfaBindingSource3;
+        private System.Windows.Forms.BindingSource marfaBindingSource4;
+        private System.Windows.Forms.BindingSource mFdbDataSet2BindingSource;
+        private MFdbDataSet3 mFdbDataSet3;
+        private System.Windows.Forms.BindingSource marfaBindingSource5;
+        private MFdbDataSet3TableAdapters.MarfaTableAdapter marfaTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipProdusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeprodusDataGridViewTextBoxColumn;
@@ -487,6 +549,6 @@ namespace Gestiune_Coafor
         private System.Windows.Forms.DataGridViewTextBoxColumn pretBucRONDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataexpirareDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn furnizorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox Id_txtBox;
     }
 }

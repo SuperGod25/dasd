@@ -59,6 +59,7 @@ namespace Gestiune_Coafor
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Id_txtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.angajatiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mFdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,9 +84,9 @@ namespace Gestiune_Coafor
             // 
             this.refresh_btn.BackColor = System.Drawing.Color.Transparent;
             this.refresh_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh_btn.Location = new System.Drawing.Point(13, 12);
+            this.refresh_btn.Location = new System.Drawing.Point(13, 6);
             this.refresh_btn.Name = "refresh_btn";
-            this.refresh_btn.Size = new System.Drawing.Size(73, 58);
+            this.refresh_btn.Size = new System.Drawing.Size(74, 30);
             this.refresh_btn.TabIndex = 0;
             this.refresh_btn.Text = "Refresh";
             this.refresh_btn.UseVisualStyleBackColor = false;
@@ -179,6 +180,7 @@ namespace Gestiune_Coafor
             this.save_btn.TabIndex = 0;
             this.save_btn.Text = "Salvare";
             this.save_btn.UseVisualStyleBackColor = false;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // delete_btn
             // 
@@ -190,6 +192,7 @@ namespace Gestiune_Coafor
             this.delete_btn.TabIndex = 0;
             this.delete_btn.Text = "Stergere";
             this.delete_btn.UseVisualStyleBackColor = false;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // back_btn
             // 
@@ -321,7 +324,7 @@ namespace Gestiune_Coafor
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = (System.Drawing.Image)global::Gestiune_Coafor.Properties.Resources.logo_mada_no_ellipse2;
+            this.pictureBox1.Image = global::Gestiune_Coafor.Properties.Resources.logo_mada_no_ellipse2;
             this.pictureBox1.Location = new System.Drawing.Point(852, -3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 101);
@@ -329,11 +332,19 @@ namespace Gestiune_Coafor
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // Id_txtbox
+            // 
+            this.Id_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_txtbox.Location = new System.Drawing.Point(13, 41);
+            this.Id_txtbox.Name = "Id_txtbox";
+            this.Id_txtbox.Size = new System.Drawing.Size(85, 29);
+            this.Id_txtbox.TabIndex = 2;
+            // 
             // Angajati
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = (System.Drawing.Image)global::Gestiune_Coafor.Properties.Resources.background_mada;
+            this.BackgroundImage = global::Gestiune_Coafor.Properties.Resources.background_mada;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(967, 745);
             this.Controls.Add(this.pictureBox1);
@@ -348,6 +359,7 @@ namespace Gestiune_Coafor
             this.Controls.Add(this.program_txtBox);
             this.Controls.Add(this.an_nastere_txtBox);
             this.Controls.Add(this.prenume_txtBox);
+            this.Controls.Add(this.Id_txtbox);
             this.Controls.Add(this.nume_txtBox);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.delete_btn);
@@ -400,5 +412,6 @@ namespace Gestiune_Coafor
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox Id_txtbox;
     }
 }

@@ -85,7 +85,6 @@
     <Compile Include="Furnizori.Designer.cs">
       <DependentUpon>Furnizori.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gestiune_Coafor\Properties\Resources.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +117,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MFdbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MFdbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MFdbDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Programari.cs">
@@ -188,6 +192,17 @@
     </None>
     <None Include="MFdbDataSet2.xss">
       <DependentUpon>MFdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MFdbDataSet3.xsc">
+      <DependentUpon>MFdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MFdbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MFdbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MFdbDataSet3.xss">
+      <DependentUpon>MFdbDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

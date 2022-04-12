@@ -45,15 +45,6 @@ namespace Gestiune_Coafor
             this.save_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviciuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numespecialistDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pretDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.progrmariBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mFdbDataSet1 = new Gestiune_Coafor.MFdbDataSet1();
             this.refresh_btn = new System.Windows.Forms.Button();
@@ -62,9 +53,16 @@ namespace Gestiune_Coafor
             this.label6 = new System.Windows.Forms.Label();
             this.pret_txtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.validat_txtBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Id_txtBox = new System.Windows.Forms.TextBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviciuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numespecialistDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pretDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progrmariBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mFdbDataSet1)).BeginInit();
@@ -76,7 +74,7 @@ namespace Gestiune_Coafor
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(567, 22);
+            this.label5.Location = new System.Drawing.Point(585, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 16);
             this.label5.TabIndex = 54;
@@ -130,9 +128,9 @@ namespace Gestiune_Coafor
             // nume_specialist_txtBox
             // 
             this.nume_specialist_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nume_specialist_txtBox.Location = new System.Drawing.Point(583, 41);
+            this.nume_specialist_txtBox.Location = new System.Drawing.Point(581, 39);
             this.nume_specialist_txtBox.Name = "nume_specialist_txtBox";
-            this.nume_specialist_txtBox.Size = new System.Drawing.Size(85, 29);
+            this.nume_specialist_txtBox.Size = new System.Drawing.Size(101, 29);
             this.nume_specialist_txtBox.TabIndex = 48;
             // 
             // serviciu_txtBox
@@ -189,6 +187,7 @@ namespace Gestiune_Coafor
             this.delete_btn.TabIndex = 42;
             this.delete_btn.Text = "Stergere";
             this.delete_btn.UseVisualStyleBackColor = false;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // save_btn
             // 
@@ -200,6 +199,7 @@ namespace Gestiune_Coafor
             this.save_btn.TabIndex = 41;
             this.save_btn.Text = "Salvare";
             this.save_btn.UseVisualStyleBackColor = false;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // add_btn
             // 
@@ -211,6 +211,7 @@ namespace Gestiune_Coafor
             this.add_btn.TabIndex = 40;
             this.add_btn.Text = "Adauga";
             this.add_btn.UseVisualStyleBackColor = false;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // dataGridView1
             // 
@@ -224,13 +225,98 @@ namespace Gestiune_Coafor
             this.oraDataGridViewTextBoxColumn,
             this.serviciuDataGridViewTextBoxColumn,
             this.numespecialistDataGridViewTextBoxColumn,
-            this.pretDataGridViewTextBoxColumn,
-            this.validatDataGridViewTextBoxColumn});
+            this.pretDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.progrmariBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(32, 74);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(745, 659);
             this.dataGridView1.TabIndex = 44;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // progrmariBindingSource
+            // 
+            this.progrmariBindingSource.DataMember = "Progrmari";
+            this.progrmariBindingSource.DataSource = this.mFdbDataSet1;
+            // 
+            // mFdbDataSet1
+            // 
+            this.mFdbDataSet1.DataSetName = "MFdbDataSet1";
+            this.mFdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // refresh_btn
+            // 
+            this.refresh_btn.BackColor = System.Drawing.Color.Transparent;
+            this.refresh_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh_btn.Location = new System.Drawing.Point(32, 12);
+            this.refresh_btn.Name = "refresh_btn";
+            this.refresh_btn.Size = new System.Drawing.Size(73, 26);
+            this.refresh_btn.TabIndex = 39;
+            this.refresh_btn.Text = "Refresh";
+            this.refresh_btn.UseVisualStyleBackColor = false;
+            this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
+            // 
+            // progrmariTableAdapter
+            // 
+            this.progrmariTableAdapter.ClearBeforeFill = true;
+            // 
+            // ora_txtBox
+            // 
+            this.ora_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ora_txtBox.Location = new System.Drawing.Point(425, 41);
+            this.ora_txtBox.Name = "ora_txtBox";
+            this.ora_txtBox.Size = new System.Drawing.Size(47, 29);
+            this.ora_txtBox.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(359, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 18);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "Data";
+            // 
+            // pret_txtBox
+            // 
+            this.pret_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pret_txtBox.Location = new System.Drawing.Point(688, 40);
+            this.pret_txtBox.Name = "pret_txtBox";
+            this.pret_txtBox.Size = new System.Drawing.Size(79, 29);
+            this.pret_txtBox.TabIndex = 47;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(712, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 18);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Pret";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::Gestiune_Coafor.Properties.Resources.logo_mada_no_ellipse2;
+            this.pictureBox1.Location = new System.Drawing.Point(862, -9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Id_txtBox
+            // 
+            this.Id_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_txtBox.Location = new System.Drawing.Point(32, 39);
+            this.Id_txtBox.Name = "Id_txtBox";
+            this.Id_txtBox.Size = new System.Drawing.Size(85, 29);
+            this.Id_txtBox.TabIndex = 47;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -282,126 +368,22 @@ namespace Gestiune_Coafor
             this.pretDataGridViewTextBoxColumn.DataPropertyName = "Pret";
             this.pretDataGridViewTextBoxColumn.HeaderText = "Pret";
             this.pretDataGridViewTextBoxColumn.Name = "pretDataGridViewTextBoxColumn";
-            this.pretDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // validatDataGridViewTextBoxColumn
-            // 
-            this.validatDataGridViewTextBoxColumn.DataPropertyName = "Validat";
-            this.validatDataGridViewTextBoxColumn.HeaderText = "Validat";
-            this.validatDataGridViewTextBoxColumn.Name = "validatDataGridViewTextBoxColumn";
-            this.validatDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // progrmariBindingSource
-            // 
-            this.progrmariBindingSource.DataMember = "Progrmari";
-            this.progrmariBindingSource.DataSource = this.mFdbDataSet1;
-            // 
-            // mFdbDataSet1
-            // 
-            this.mFdbDataSet1.DataSetName = "MFdbDataSet1";
-            this.mFdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // refresh_btn
-            // 
-            this.refresh_btn.BackColor = System.Drawing.Color.Transparent;
-            this.refresh_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh_btn.Location = new System.Drawing.Point(32, 12);
-            this.refresh_btn.Name = "refresh_btn";
-            this.refresh_btn.Size = new System.Drawing.Size(73, 58);
-            this.refresh_btn.TabIndex = 39;
-            this.refresh_btn.Text = "Refresh";
-            this.refresh_btn.UseVisualStyleBackColor = false;
-            this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
-            // 
-            // progrmariTableAdapter
-            // 
-            this.progrmariTableAdapter.ClearBeforeFill = true;
-            // 
-            // ora_txtBox
-            // 
-            this.ora_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ora_txtBox.Location = new System.Drawing.Point(425, 41);
-            this.ora_txtBox.Name = "ora_txtBox";
-            this.ora_txtBox.Size = new System.Drawing.Size(47, 29);
-            this.ora_txtBox.TabIndex = 47;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(359, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 18);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "Data";
-            // 
-            // pret_txtBox
-            // 
-            this.pret_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pret_txtBox.Location = new System.Drawing.Point(674, 41);
-            this.pret_txtBox.Name = "pret_txtBox";
-            this.pret_txtBox.Size = new System.Drawing.Size(47, 29);
-            this.pret_txtBox.TabIndex = 47;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(679, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 18);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "Pret";
-            // 
-            // validat_txtBox
-            // 
-            this.validat_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validat_txtBox.Location = new System.Drawing.Point(730, 41);
-            this.validat_txtBox.Name = "validat_txtBox";
-            this.validat_txtBox.Size = new System.Drawing.Size(47, 29);
-            this.validat_txtBox.TabIndex = 47;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(727, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 18);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Validat";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = (System.Drawing.Image)global::Gestiune_Coafor.Properties.Resources.logo_mada_no_ellipse2;
-            this.pictureBox1.Location = new System.Drawing.Point(862, -9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
             // 
             // Programari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = (System.Drawing.Image)global::Gestiune_Coafor.Properties.Resources.background_mada;
+            this.BackgroundImage = global::Gestiune_Coafor.Properties.Resources.background_mada;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(967, 745);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.validat_txtBox);
             this.Controls.Add(this.pret_txtBox);
+            this.Controls.Add(this.Id_txtBox);
             this.Controls.Add(this.ora_txtBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -452,6 +434,12 @@ namespace Gestiune_Coafor
         private MFdbDataSet1 mFdbDataSet1;
         private System.Windows.Forms.BindingSource progrmariBindingSource;
         private MFdbDataSet1TableAdapters.ProgrmariTableAdapter progrmariTableAdapter;
+        private System.Windows.Forms.TextBox ora_txtBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox pret_txtBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox Id_txtBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenumeclientDataGridViewTextBoxColumn;
@@ -460,13 +448,5 @@ namespace Gestiune_Coafor
         private System.Windows.Forms.DataGridViewTextBoxColumn serviciuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numespecialistDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pretDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn validatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox ora_txtBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox pret_txtBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox validat_txtBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
