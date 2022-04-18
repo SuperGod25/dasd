@@ -16,7 +16,7 @@ namespace Gestiune_Coafor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BazaDeDateMF());
+            Application.Run(new MainMenu());
         }
     }
 }

@@ -56,7 +56,6 @@ namespace Gestiune_Coafor
         private void add_btn_Click(object sender, EventArgs e)
         {
             SqlCommand cmd1 = new SqlCommand("Insert into Furnizori(Nume_furnizor,Produse_furnizor,Locatie_Sediu)Values(@Nume_furnizor,@Produse_furnizor,@Locatie_Sediu)", con);
-            ///SqlCommand cmd1 = new SqlCommand("Insert into Furnizori(Nume_furnizor,Produse_furnizor,Locatie_Sediu)Values('" + nume_furnizor.Text + "','" + numeProdus_txtBox.Text + "', '" + locatie_txtBox.Text + "'", con);
             cmd1.Parameters.AddWithValue("@Nume_furnizor", nume_furnizor.Text);                  
             cmd1.Parameters.AddWithValue("@Produse_furnizor", numeProdus_txtBox.Text);
             cmd1.Parameters.AddWithValue("@Locatie_Sediu", locatie_txtBox.Text);
